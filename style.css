@@ -1,5 +1,6 @@
 div[data-cell] {
-    width: 100px;
+    width: calc(100% / 3);
+    display: inline-block;
     height: 100px;
     background-color: #f2f2f2;
     float: left;
@@ -8,8 +9,12 @@ div[data-cell] {
     text-align: center;
 }
 
-.row {
-    clear: both;
+h1 {
+  text-align: center;
+}
+
+#gameBoard {
+  border: solid blue 5px;
 }
 
 #announce-winner {
