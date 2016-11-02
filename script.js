@@ -2,6 +2,7 @@
 
 $(document).on('ready', function() {
 
+    // Set the current player turn
     var playerTurn = 'X';
 
     //Check for a win
@@ -20,6 +21,7 @@ $(document).on('ready', function() {
       }
     }//!checkForWin
 
+    // Check for win helper functions ////////////////////
     function checkVertWin() {
       if (($('[data-cell="0"]').text() === playerTurn &&
           $('[data-cell="3"]').text() === playerTurn &&
@@ -84,9 +86,10 @@ $(document).on('ready', function() {
 
     });
 
-    //Spec 4:
+    // Clear the data when the button is clicked
     $('button#clear').click(function() {
       $('[data-cell]').text('');
+      $('#announce-winner').text('');
       playerTurn = 'X';
     });//!button#clear
 });
